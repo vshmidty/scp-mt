@@ -1,0 +1,17 @@
+﻿ID: HiMTA
+_schema-version: 2.1
+version: 0.0.1
+
+resources:
+    -
+        name: lev_conn
+        type: org.cloudfoundry.managed-service
+        parameters:
+            service: connectivity
+            service-plan: lite
+    -
+        name: lev_dest
+        type: org.cloudfoundry.managed-service
+        parameters:
+            service: destination
+            service-plan: lite

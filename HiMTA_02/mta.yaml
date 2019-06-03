@@ -1,0 +1,50 @@
+﻿ID: HiMTA
+_schema-version: 2.1
+version: 0.0.1
+
+modules:
+    -
+        name: db
+        type: hdb
+        path: db
+        requires:
+            - {name: lev_hdi}
+        provides:
+            - {name: lev_db}
+        parameters:
+            memory: 128M
+            disk_quota: 128M
+    -
+        name: service
+        type: nodejs
+        path: service
+        requires:
+            - {name: lev_db}
+            - {name: lev_hdi}
+        provides:
+            - {name: lev_service, properties: {url: '${default-url}'}}
+        parameters:
+            memory: 128M
+            disk_quota: 128M
+resources:
+    -
+        name: lev_hdi
+        parameters:
+            service-plan: hdi-shared
+            service: hanatrial
+            config: {schema: HiMTA}
+        properties:
+            hdi-container-name: '${service-name}'
+        type: com.sap.xs.hdi-container
+    -
+        name: lev_conn
+        type: org.cloudfoundry.managed-service
+        parameters:
+            service: connectivity
+            service-plan: lite
+    -
+        name: lev_dest
+        type: org.cloudfoundry.managed-service
+        parameters:
+            service: destination
+            service-plan: lite

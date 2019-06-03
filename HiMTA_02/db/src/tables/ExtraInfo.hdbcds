@@ -1,0 +1,21 @@
+﻿namespace HiMTA;
+using HiMTA::User;
+
+context ExtraInfo{
+
+		entity Address {
+		    key adid : Integer64 generated always as identity ( start with 1 increment by 1 );
+		    usid : String(4);
+		    city : String(100);
+		    strt : String(100);
+		    hnum : Integer;
+		};
+
+		entity Cars {
+		    key crid : String(4);
+		    usid : String(4);
+		    name : String(100);
+
+    		toUser : Association[1] to User on toUser.usid = usid;
+		};
+};

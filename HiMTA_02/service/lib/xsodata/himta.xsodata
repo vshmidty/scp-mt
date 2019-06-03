@@ -1,0 +1,28 @@
+service namespace "HiMTA"{
+
+    "HiMTA::User" as "Users"
+                navigates("Users_2_Address" as "toAddress", "Users_2_Cars" as "toCars")
+            create using "xsjs.user:usersCreate.xsjslib::usersCreate"
+            update forbidden
+            delete forbidden;
+
+    "HiMTA::ExtraInfo.Address" as "Address"
+            create forbidden
+            update forbidden
+            delete forbidden;
+
+    "HiMTA::ExtraInfo.Cars" as "Cars"
+                navigates("Cars_2_User" as "toUser")
+            create forbidden
+            update forbidden
+            delete forbidden;
+
+    association "Users_2_Address" principal "Users"("usid")
+            multiplicity "1" dependent "Address"("usid") multiplicity "1";
+
+    association "Users_2_Cars" principal "Users"("usid")
+            multiplicity "1" dependent "Cars"("usid") multiplicity "*";
+
+    association "Cars_2_User" principal "Cars"("usid")
+            multiplicity "1" dependent "Users"("usid") multiplicity "1";
+}
