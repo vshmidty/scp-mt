@@ -1,0 +1,35 @@
+﻿ID: lev_web1
+_schema-version: 2.1
+version: 0.0.1
+modules:
+    -
+        name: user_create
+        type: html5
+        path: user_create
+        parameters:
+            disk-quota: 256M
+            memory: 256M
+        build-parameters:
+            builder: grunt
+        requires:
+            - {name: lev_dest}
+            - {name: lev_conn}
+    -
+        name: user_display
+        type: html5
+        path: user_display
+        parameters:
+            disk-quota: 256M
+            memory: 256M
+        build-parameters:
+            builder: grunt
+        requires:
+            - {name: lev_dest}
+            - {name: lev_conn}
+resources:
+    -
+        name: lev_dest
+        type: org.cloudfoundry.existing-service
+    -
+        name: lev_conn
+        type: org.cloudfoundry.existing-service

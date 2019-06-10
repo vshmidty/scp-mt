@@ -1,0 +1,14 @@
+npm WARN user_display@0.0.1 No description
+npm WARN user_display@0.0.1 No repository field.
+npm WARN user_display@0.0.1 No license field.
+
+audited 1732 packages in 6.794s
+found 34 vulnerabilities (7 low, 24 moderate, 3 high)
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+┌───────────────────────────────────────────────────────────────────┐
+│                      npm update check failed                      │
+│                Try running with sudo or get access                │
+│               to the local update config store via                │
+│ sudo chown -R $USER:$(id -gn $USER) C:\Users\vasil.shmidt\.config │
+└───────────────────────────────────────────────────────────────────┘

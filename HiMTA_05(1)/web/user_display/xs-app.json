@@ -1,0 +1,12 @@
+{
+  "welcomeFile": "user_display/index.html",
+  "authenticationMethod": "none",
+  "routes": [
+    {
+      "source": "^/user_display/(.*)$",
+      "target": "$1",
+      "localDir": "webapp",
+      "authenticationType": "xsuaa"
+    }
+  ]
+}

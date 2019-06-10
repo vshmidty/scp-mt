@@ -1,0 +1,55 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    controllerName="user_create.controller.Master">
+    <Page showHeader="false">
+        <f:SimpleForm
+            title="User Create"
+            editable="true"
+            layout="ResponsiveGridLayout"
+            labelSpanXL="12" labelSpanL="12" labelSpanM="12"
+            labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0"
+            emptySpanS="0" columnsXL="3" columnsL="3" columnsM="3" singleContainerFullSize="false">
+            <f:content>
+                <core:Title text="User" />
+                <VBox>
+                    <Label text="{i18n>usid}"/>
+                    <Input value="{data>/usid}" enabled="false"/>
+
+                    <Label text="{i18n>name}" />
+                    <Input maxLength="70" value="{data>/name}"/>
+                </VBox>
+
+                <core:Title text="Address" />
+                <VBox>
+                    <Label text="{i18n>city}"/>
+                    <Input value="{data>/toAddress/city}"/>
+
+                    <Label text="{i18n>strt}"/>
+                    <Input value="{data>/toAddress/strt}"/>
+
+                    <Label text="{i18n>hnum}"/>
+                    <Input type="Number" value="{data>/toAddress/hnum}"/>
+                </VBox>
+            </f:content>
+        </f:SimpleForm>
+        <footer>
+            <OverflowToolbar visible="{config>/isEdit}">
+                <ToolbarSpacer/>
+                <Button type="Accept" text="{i18n>save}" press="onSave">
+                    <layoutData>
+                        <OverflowToolbarLayoutData priority="NeverOverflow"/>
+                    </layoutData>
+                </Button>
+                <Button type="Reject" text="{i18n>cancel}" press="onCancel">
+                    <layoutData>
+                        <OverflowToolbarLayoutData priority="NeverOverflow"/>
+                    </layoutData>
+                </Button>
+            </OverflowToolbar>
+        </footer>
+    </Page>
+
+</mvc:View>

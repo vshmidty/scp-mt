@@ -1,0 +1,104 @@
+[main] INFO com.sap.di.ext.mta.proc.DescriptorProcessorImpl - MTA manifest processing on 7 threads
+[main] INFO com.sap.di.ext.mta.cli.CliExecutor - arguments: [--build-target=CF, build]
+[main] INFO com.sap.di.ext.mta.cli.CliExecutor - Archive path is D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\HiMTA_04(2).mtar
+[main] DEBUG com.sap.di.ext.mta.cli.CliBuildExecutor - Starting MTA build
+[main] INFO com.sap.di.beans.DynamicBeans - Created implementation class com.sap.di.ext.mta.dto.DesignDescriptor$$impl0 for bean interface com.sap.di.ext.mta.dto.DesignDescriptor
+[main] INFO com.sap.di.beans.DynamicBeans - Created implementation class com.sap.di.ext.mta.dto.DesignModule$$impl1 for bean interface com.sap.di.ext.mta.dto.DesignModule
+[main] INFO com.sap.di.beans.DynamicBeans - Created implementation class com.sap.di.ext.mta.dto.RequiredSymbol$$impl2 for bean interface com.sap.di.ext.mta.dto.RequiredSymbol
+[main] INFO com.sap.di.beans.DynamicBeans - Created implementation class com.sap.di.ext.mta.dto.ProvidedSymbol$$impl3 for bean interface com.sap.di.ext.mta.dto.ProvidedSymbol
+[main] INFO com.sap.di.beans.DynamicBeans - Created implementation class com.sap.di.ext.mta.dto.Resource$$impl4 for bean interface com.sap.di.ext.mta.dto.Resource
+[main] INFO com.sap.di.ext.mta.proc.ProcessingRun - Processing MTA HiMTA
+[main] INFO com.sap.di.beans.DynamicBeans - Created implementation class com.sap.di.ext.mta.proc.ModuleBuildDependency$$impl5 for bean interface com.sap.di.ext.mta.proc.ModuleBuildDependency
+[main] DEBUG com.sap.di.ext.mta.proc.ModuleHandler - processed build dependency from module 'deployer' to module 'user_create'
+[main] DEBUG com.sap.di.ext.mta.proc.ModuleHandler - processed build dependency from module 'deployer' to module 'user_display'
+[main] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA HiMTA
+[main] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA HiMTA: created 12 verification tasks
+[pool-1-thread-1] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA HiMTA: started symbol resource[pt_uaa]
+[pool-1-thread-3] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA HiMTA: started symbol resource[pt_deployer]
+[pool-1-thread-2] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA HiMTA: started symbol resource[pt_hdi]
+[pool-1-thread-5] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA HiMTA: started symbol resource[pt_conn]
+[pool-1-thread-4] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA HiMTA: started symbol resource[pt_router]
+[pool-1-thread-7] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA HiMTA: started symbol module[db]
+[pool-1-thread-6] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA HiMTA: started symbol resource[pt_dest]
+[pool-1-thread-5] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA HiMTA: finished symbol resource[pt_conn]
+[pool-1-thread-2] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA HiMTA: finished symbol resource[pt_hdi]
+[pool-1-thread-4] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA HiMTA: finished symbol resource[pt_router]
+[pool-1-thread-3] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA HiMTA: finished symbol resource[pt_deployer]
+[pool-1-thread-6] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA HiMTA: finished symbol resource[pt_dest]
+[pool-1-thread-4] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA HiMTA: started symbol module[service]
+[pool-1-thread-2] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA HiMTA: started symbol module[router]
+[pool-1-thread-3] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA HiMTA: started symbol module[user_display]
+[pool-1-thread-5] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA HiMTA: started symbol module[user_create]
+[pool-1-thread-1] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA HiMTA: finished symbol resource[pt_uaa]
+[pool-1-thread-2] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'router': command timeout is 300 seconds
+[pool-1-thread-3] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'user_display': command timeout is 300 seconds
+[pool-1-thread-5] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'user_create': command timeout is 300 seconds
+[pool-1-thread-4] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'service': command timeout is 300 seconds
+[pool-1-thread-7] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'db': command timeout is 300 seconds
+[pool-1-thread-2] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'router': command output file is D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\.mta\modulebuild475940141795150641.txt
+[pool-1-thread-2] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'router': invoking command [npm.cmd, install, --production]
+[pool-1-thread-5] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'user_create': command output file is D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\.mta\modulebuild8667169911303922788.txt
+[pool-1-thread-4] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'service': command output file is D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\.mta\modulebuild3378316305408358594.txt
+[pool-1-thread-4] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'service': invoking command [npm.cmd, install, --production]
+[pool-1-thread-7] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'db': command output file is D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\.mta\modulebuild2637815882829627245.txt
+[pool-1-thread-3] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'user_display': command output file is D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\.mta\modulebuild8077297330791718634.txt
+[pool-1-thread-7] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'db': invoking command [npm.cmd, install, --production]
+[pool-1-thread-3] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'user_display': invoking command [npm.cmd, install]
+[pool-1-thread-5] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'user_create': invoking command [npm.cmd, install]
+[pool-1-thread-7] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA HiMTA: finished symbol module[db]
+[pool-1-thread-2] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA HiMTA: finished symbol module[router]
+[pool-1-thread-4] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA HiMTA: finished symbol module[service]
+[pool-1-thread-5] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'user_create': command timeout is 300 seconds
+[pool-1-thread-5] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'user_create': command output file is D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\.mta\modulebuild5882977944484023732.txt
+[pool-1-thread-5] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'user_create': invoking command [grunt.cmd]
+[pool-1-thread-3] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'user_display': command timeout is 300 seconds
+[pool-1-thread-3] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'user_display': command output file is D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\.mta\modulebuild6311689430070195568.txt
+[pool-1-thread-3] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'user_display': invoking command [grunt.cmd]
+[pool-1-thread-5] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'user_create': command timeout is 300 seconds
+[pool-1-thread-5] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'user_create': command output file is D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\.mta\modulebuild2355508213940823547.txt
+[pool-1-thread-5] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'user_create': invoking command [npm.cmd, prune, --production]
+[pool-1-thread-3] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'user_display': command timeout is 300 seconds
+[pool-1-thread-3] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'user_display': command output file is D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\.mta\modulebuild1794809521061688798.txt
+[pool-1-thread-3] DEBUG com.sap.di.ext.mta.cli.CommandHelper - Module 'user_display': invoking command [npm.cmd, prune, --production]
+[pool-1-thread-5] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA HiMTA: finished symbol module[user_create]
+[pool-1-thread-3] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA HiMTA: finished symbol module[user_display]
+[pool-1-thread-6] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA HiMTA: started symbol module[deployer]
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.cli.CliBuildExecutor - copying build dependency from 'deployer' to 'user_create' via D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\.mta\8743365952382322807.tmp
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.builder.BuildDependencyProcessor - processing build dependency ModuleBuildDependency{artifacts=[./*], name=user_create, targetPath=resources/user_create} inside D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\deployer
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.builder.BuildDependencyProcessor - applying pattern ./* as a regex ^([^/]*(/.*)?)
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.builder.BuildDependencyProcessor - copying file Component-dbg.js from build dependency to D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\deployer\resources\user_create\Component-dbg.js
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.builder.BuildDependencyProcessor - copying file Component-preload.js from build dependency to D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\deployer\resources\user_create\Component-preload.js
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.builder.BuildDependencyProcessor - copying file Component.js from build dependency to D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\deployer\resources\user_create\Component.js
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.builder.BuildDependencyProcessor - copying file controller/ from build dependency to D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\deployer\resources\user_create\controller
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.builder.BuildDependencyProcessor - copying file css/ from build dependency to D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\deployer\resources\user_create\css
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.builder.BuildDependencyProcessor - copying file fragment/ from build dependency to D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\deployer\resources\user_create\fragment
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.builder.BuildDependencyProcessor - copying file fragment/ConfirmDeleteDialog.fragment.xml from build dependency to D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\deployer\resources\user_create\fragment\ConfirmDeleteDialog.fragment.xml
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.builder.BuildDependencyProcessor - copying file i18n/ from build dependency to D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\deployer\resources\user_create\i18n
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.builder.BuildDependencyProcessor - copying file index.html from build dependency to D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\deployer\resources\user_create\index.html
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.builder.BuildDependencyProcessor - copying file manifest-bundle.zip from build dependency to D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\deployer\resources\user_create\manifest-bundle.zip
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.builder.BuildDependencyProcessor - copying file manifest.json from build dependency to D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\deployer\resources\user_create\manifest.json
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.builder.BuildDependencyProcessor - copying file model/ from build dependency to D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\deployer\resources\user_create\model
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.builder.BuildDependencyProcessor - copying file resources.json from build dependency to D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\deployer\resources\user_create\resources.json
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.builder.BuildDependencyProcessor - copying file sap-ui-cachebuster-info.json from build dependency to D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\deployer\resources\user_create\sap-ui-cachebuster-info.json
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.builder.BuildDependencyProcessor - copying file view/ from build dependency to D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\deployer\resources\user_create\view
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.builder.BuildDependencyProcessor - copying file xs-app.json from build dependency to D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\deployer\resources\user_create\xs-app.json
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.cli.CliBuildExecutor - copying build dependency from 'deployer' to 'user_display' via D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\.mta\8466268578580373311.tmp
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.builder.BuildDependencyProcessor - processing build dependency ModuleBuildDependency{artifacts=[./*], name=user_display, targetPath=resources/user_display} inside D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\deployer
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.builder.BuildDependencyProcessor - applying pattern ./* as a regex ^([^/]*(/.*)?)
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.builder.BuildDependencyProcessor - copying file Component-dbg.js from build dependency to D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\deployer\resources\user_display\Component-dbg.js
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.builder.BuildDependencyProcessor - copying file Component-preload.js from build dependency to D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\deployer\resources\user_display\Component-preload.js
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.builder.BuildDependencyProcessor - copying file Component.js from build dependency to D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\deployer\resources\user_display\Component.js
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.builder.BuildDependencyProcessor - copying file controller/ from build dependency to D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\deployer\resources\user_display\controller
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.builder.BuildDependencyProcessor - copying file css/ from build dependency to D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\deployer\resources\user_display\css
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.builder.BuildDependencyProcessor - copying file i18n/ from build dependency to D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\deployer\resources\user_display\i18n
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.builder.BuildDependencyProcessor - copying file index.html from build dependency to D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\deployer\resources\user_display\index.html
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.builder.BuildDependencyProcessor - copying file manifest-bundle.zip from build dependency to D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\deployer\resources\user_display\manifest-bundle.zip
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.builder.BuildDependencyProcessor - copying file manifest.json from build dependency to D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\deployer\resources\user_display\manifest.json
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.builder.BuildDependencyProcessor - copying file model/ from build dependency to D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\deployer\resources\user_display\model
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.builder.BuildDependencyProcessor - copying file resources.json from build dependency to D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\deployer\resources\user_display\resources.json
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.builder.BuildDependencyProcessor - copying file sap-ui-cachebuster-info.json from build dependency to D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\deployer\resources\user_display\sap-ui-cachebuster-info.json
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.builder.BuildDependencyProcessor - copying file view/ from build dependency to D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\deployer\resources\user_display\view
+[pool-1-thread-6] DEBUG com.sap.di.ext.mta.builder.BuildDependencyProcessor - copying file xs-app.json from build dependency to D:\08 T1000 - SAP HANA Cloud Platform (Course H)\00 Course Materials\40 Extra Materials\HiMTA_04(2)\deployer\resources\user_display\xs-app.json
+[pool-1-thread-6] INFO com.sap.di.ext.mta.proc.ProcessingRun - Verifying MTA HiMTA: finished symbol module[deployer]
+[main] INFO com.sap.di.beans.DynamicBeans - Created implementation class com.sap.di.ext.mta.dto.DeploymentDescriptor$$impl6 for bean interface com.sap.di.ext.mta.dto.DeploymentDescriptor
+[main] INFO com.sap.di.beans.DynamicBeans - Created implementation class com.sap.di.ext.mta.dto.DeploymentModule$$impl7 for bean interface com.sap.di.ext.mta.dto.DeploymentModule

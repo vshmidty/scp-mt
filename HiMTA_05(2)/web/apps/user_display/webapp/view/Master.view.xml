@@ -1,0 +1,44 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    controllerName="user_display.controller.Master">
+    <Page showHeader="false">
+        <Table
+            busyIndicatorDelay="0"
+            growing="true"
+            growingScrollToLoad="true"
+            noDataText="{i18n>tableNoDataText}"
+            items="{/Users}"
+            width="auto">
+            <headerToolbar>
+                <Toolbar>
+                    <Title id="idCountTitle"/>
+                    <ToolbarSpacer/>
+                    <Button
+                        icon="sap-icon://action-settings"
+                        tooltip="{i18n>onSettings}"
+                        press="onSettings"/>
+                </Toolbar>
+            </headerToolbar>
+            <columns>
+                <Column width="20%">
+                    <Label text="{i18n>system}" design="Bold"/>
+                </Column>
+                <Column>
+                    <Label text="{i18n>description}" design="Bold"/>
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem type="Navigation" press="onGoToDetail">
+                    <cells>
+                        <Text text="{usid}"/>
+                        <Text text="{name}"/>
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+    </Page>
+
+</mvc:View>

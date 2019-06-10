@@ -1,0 +1,13 @@
+{
+  "welcomeFile": "user_create/index.html",
+  "authenticationMethod": "none",
+  "routes": [
+    {
+      "source": "^/user_create/(.*)$",
+      "target": "$1",
+      "localDir": "webapp",
+      "authenticationType": "xsuaa"
+    },
+
+  ]
+}

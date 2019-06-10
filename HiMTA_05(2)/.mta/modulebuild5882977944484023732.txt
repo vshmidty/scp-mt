@@ -1,0 +1,48 @@
+Running "clean:dist" (clean) task
+>> 1 path cleaned.
+
+Running "bundleChanges" task
+
+Running "copy:copyToDbg" (copy) task
+Copied 1 file
+
+Running "copy:copyToTmp" (copy) task
+Created 6 directories, copied 7 files
+
+Running "devxUpdateManifest" task
+>> failed to update manifest.json file devxUpdateManifest - Incorrect manifest.json structure, dataSources undefined
+
+Running "cssmin:build" (cssmin) task
+>> No files created.
+
+Running "openui5_preload:preloadTmp" (openui5_preload) task
+File dist\tmp\Component-preload.js created with 3 files (2.1 kB → 1.49 kB)
+
+Running "copy:copyDbgToDist" (copy) task
+Copied 1 file
+
+Running "copy:copyProjectFilesToDist" (copy) task
+Copied 1 file
+
+Running "uglify:uglifyPreload" (uglify) task
+>> 1 file created 1.92 kB → 1.72 kB
+
+Running "copy:copyTmpToDist" (copy) task
+Created 6 directories, copied 6 files
+
+Running "devx-updateNeoApp" task
+no neo-app.json file found
+
+Running "createResourcesJson" task
+
+Running "createManifestBundle" task
+
+Running "cleanTmp" task
+
+Running "createsCachebusterInfoJson" task
+starting running createCachebusterInfoJson
+finish running createCachebusterInfoJson
+
+Running "cleanupChanges" task
+
+Done.
