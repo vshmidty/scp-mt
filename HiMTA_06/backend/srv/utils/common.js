@@ -2,14 +2,9 @@
 /*eslint-env node, es6 */
 "use strict";
 
-const PTError = require(global.__base + "utils/PTError");
-const ENTITY = require(global.__base + "utils/entity");
-
-
 //HERE we export some methods
 module.exports = {
     getInnerProperty: getInnerProperty,
-    getEntityByLabel: getEntityByLabel,
 
     checkAjaxAuth: checkAjaxAuth,
     getAjaxUser: getAjaxUser,
@@ -43,7 +38,7 @@ function checkAjaxAuth(req, scope) {
     }
 
     if (!req.authInfo.checkScope(`${req.authInfo.xsappname}.${scope}`)) {
-        throw new PTError.CMN_Forbidden([getAjaxUser(req), `${req.authInfo.xsappname}.${scope}`]);
+        throw new Error(`User doesn't have that scope: ${req.authInfo.xsappname}.${scope}`);
     }
 }
 
@@ -58,7 +53,7 @@ function checkOdataAuth(req, scope) {
     }
 
     if (!req.attr.checkScope(`${req.attr.xsappname}.${scope}`)) {
-        throw new PTError.CMN_Forbidden([getOdataUser(req), `${req.authInfo.xsappname}.${scope}`]);
+        throw new Error(`User doesn't have that scope: ${req.authInfo.xsappname}.${scope}`);
     }
 }
 
@@ -78,7 +73,7 @@ function getOdataUser(req) {
 
     const user = fio !== " " ? fio : email;
     if (!user) {
-        throw new PTError.CMN_UserNotDefined([]);
+        throw new Error("User was not recognized");
     }
     return user;
 }
@@ -98,7 +93,7 @@ function getAjaxUser(req) {
 
     const user = fio !== " " ? fio : email;
     if (!user) {
-        throw new PTError.CMN_UserNotDefined([]);
+        throw new Error("User was not recognized");
     }
     return user;
 }
@@ -153,18 +148,6 @@ function getAjaxLang(req) {
     return arr[0].code;
 }
 
-/**
- * @param sLabel
- * @returns {oEntity}
- * @throws CMN_UnknownEntity
- */
-function getEntityByLabel(sLabel) {
-    const oEntity = ENTITY[sLabel];
-    if (!oEntity) {
-        throw new PTError.CMN_UnknownEntity([sLabel]);
-    }
-    return oEntity;
-}
 
 /**
  * @param props
@@ -187,10 +170,7 @@ function _getCompany(aCompany) {
     }
 
     if (!aCompany) {
-        throw new PTError.CMN_CompanyNotDefined([]);
-    }
-    if (aCompany.length !== 1) {
-        throw new PTError.CMN_BadCompanyProvided([]);
+        throw new Error("Company is not defined");
     }
     return aCompany[0];
 }
