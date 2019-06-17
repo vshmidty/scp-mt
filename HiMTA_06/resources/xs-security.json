@@ -1,0 +1,54 @@
+{
+  "xsappname": "HiMTA",
+  "tenant-mode": "dedicated",
+  "description": "Security profile of called application",
+  "scopes": [
+    {
+      "name": "uaa.user",
+      "description": "UAA"
+    },
+    {
+      "name": "$XSAPPNAME.himta.view",
+      "description": "Display users"
+    },
+    {
+      "name": "$XSAPPNAME.himta.create",
+      "description": "Create users"
+    }
+  ],
+  "attributes": [
+    {
+      "name": "client",
+      "description": "Session Client",
+      "valueType": "int"
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "Token_Exchange",
+      "description": "UAA",
+      "scope-references": [
+        "uaa.user"
+      ]
+    },
+    {
+      "name": "GodBatyshka",
+      "description": "Can do anything",
+      "scope-references": [
+        "$XSAPPNAME.himta.view",
+        "$XSAPPNAME.himta.create"
+      ],
+      "attribute-references": [
+      ]
+    },
+    {
+      "name": "SimpleUser",
+      "description": "Display mode only",
+      "scope-references": [
+        "$XSAPPNAME.himta.view"
+      ],
+      "attribute-references": [
+      ]
+    }
+]
+}

@@ -1,0 +1,7 @@
+npm WARN user_display@0.0.1 No description
+npm WARN user_display@0.0.1 No repository field.
+npm WARN user_display@0.0.1 No license field.
+
+removed 283 packages and audited 473 packages in 6.577s
+found 5 vulnerabilities (4 moderate, 1 high)
+  run `npm audit fix` to fix them, or `npm audit` for details

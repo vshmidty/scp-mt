@@ -1,0 +1,104 @@
+{
+  "_version": "2.8",
+  "identification": {
+    "id": "92716d90-dff4-4b9b-ad04-cb9a90ebee33-1547734468170",
+    "entityType": "bundle"
+  },
+  "payload": {
+    "catalogs": [
+      {
+        "_version": "2.8",
+        "identification": {
+          "id": "defaultCatalogId",
+          "title": "{{title}}",
+          "entityType": "catalog",
+          "i18n": "i18n/defaultCatalogId.properties"
+        },
+        "payload": {
+          "appDescriptors": [
+            {
+              "id": "user_create",
+              "intentHintId": "user_create-manage"
+            },
+            {
+              "id": "user_display",
+              "intentHintId": "user_display-display"
+            }
+          ]
+        }
+      }
+    ],
+    "groups": [
+      {
+        "_version": "2.0",
+        "identification": {
+          "id": "defaultGroupId",
+          "title": "{{title}}",
+          "entityType": "group",
+          "i18n": "i18n/defaultGroupId.properties"
+        },
+        "payload": {
+          "tiles": [
+            {
+              "id": "user_create-0-1547743524700",
+              "appId": "user_create",
+              "intentHintId": "user_create-manage"
+            },
+            {
+              "id": "user_display-1-1547743524700",
+              "appId": "user_display",
+              "intentHintId": "user_display-display"
+            }
+          ]
+        }
+      }
+    ],
+    "sites": [
+      {
+        "_version": "2.8",
+        "identification": {
+          "id": "bcabca52-aabd-4f13-84e2-c86a3b1c8ac5-1547734468171",
+          "entityType": "site",
+          "title": "SAP Fiori launchpad site on Cloud Foundry",
+          "description": "SAP Fiori launchpad site on Cloud Foundry, deployed from SAP Web IDE"
+        },
+        "payload": {
+          "config": {
+            "ushellConfig": {
+              "renderers": {
+                "fiori2": {
+                  "componentData": {
+                    "config": {
+                      "enableRecentActivity": false,
+                      "applications": {
+                        "Shell-home": {}
+                      },
+                      "enableSearch": false,
+                      "enablePersonalization": true,
+                      "enableSetTheme": false,
+                      "enableSetLanguage": false
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "groupsOrder": [
+            "defaultGroupId"
+          ],
+          "sap.cloud.portal": {
+            "config": {
+              "theme.id": "sap_belize",
+              "theme.active": [
+                "sap_belize",
+                "sap_belize_plus",
+                "sap_belize_hcb",
+                "sap_belize_hcw"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

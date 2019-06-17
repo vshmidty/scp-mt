@@ -1,0 +1,10 @@
+npm WARN deprecated istanbul@0.4.5: This module is no longer maintained, try this instead:
+npm WARN deprecated   npm i nyc
+npm WARN deprecated Visit https://istanbul.js.org/integrations for other alternatives.
+npm WARN service@1.0.0 No description
+npm WARN service@1.0.0 No repository field.
+npm WARN service@1.0.0 No license field.
+
+audited 937 packages in 5.744s
+found 11 vulnerabilities (2 low, 9 moderate)
+  run `npm audit fix` to fix them, or `npm audit` for details

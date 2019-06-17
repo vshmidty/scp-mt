@@ -1,0 +1,60 @@
+﻿ID: lev_deployer
+_schema-version: 3.1.0
+version: 1.0.0
+parameters:
+    deploy_mode: html5-repo
+
+modules:
+    -
+        name: deployer
+        type: com.sap.html5.application-content
+        path: deployer
+        provides:
+            - {name: deployer, public: true}
+        requires:
+            - {name: lev_deployer}
+        build-parameters:
+            ignore: [".git/", ".idea/", ".gitignore", ".gitlab-ci.yml", "mta.jar", "mta.yaml"]
+            requires: [{name: user_create, artifacts: ['./*'], target-path: resources/user_create},{name: user_display, artifacts: ['./*'], target-path: resources/user_display}]
+        parameters:
+            disk-quota: 256M
+            memory: 128M
+    -
+        name: user_create
+        type: html5
+        path: apps/user_create
+        build-parameters:
+            ignore: [".git/", ".idea/", ".gitignore", ".gitlab-ci.yml", "mta.jar", "mta.yaml"]
+            builder: grunt
+        parameters:
+            disk-quota: 256M
+            memory: 128M
+        requires:
+            - {name: lev_uaa}
+    -
+        name: user_display
+        type: html5
+        path: apps/user_display
+        build-parameters:
+            ignore: [".git/", ".idea/", ".gitignore", ".gitlab-ci.yml", "mta.jar", "mta.yaml"]
+            builder: grunt
+        parameters:
+            disk-quota: 256M
+            memory: 128M
+        requires:
+            - {name: lev_uaa}
+            - {name: lev_dest}
+            - {name: lev_conn}
+resources:
+    -
+        name: lev_deployer
+        type: org.cloudfoundry.existing-service
+    -
+        name: lev_dest
+        type: org.cloudfoundry.existing-service
+    -
+        name: lev_conn
+        type: org.cloudfoundry.existing-service
+    -
+        name: lev_uaa
+        type: org.cloudfoundry.existing-service
